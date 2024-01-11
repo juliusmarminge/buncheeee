@@ -1,0 +1,41 @@
+{
+  "name": "b",
+  "type": "module",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=18.13.0"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rm -rf dist && bunchee"
+  },
+  "devDependencies": {
+    "a": "workspace:*",
+    "bunchee": "^4.3.1",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "a": "*"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "dist/index.d.ts"
+      ]
+    }
+  }
+}

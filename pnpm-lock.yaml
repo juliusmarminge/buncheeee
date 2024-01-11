@@ -40,6 +40,18 @@ importers:
         specifier: ^3.22.3
         version: 3.22.3
 
+  packages/b:
+    devDependencies:
+      a:
+        specifier: workspace:*
+        version: link:../a
+      bunchee:
+        specifier: ^4.3.1
+        version: 4.3.1(typescript@5.1.6)
+      typescript:
+        specifier: ^5.1.6
+        version: 5.1.6
+
   packages/shared:
     devDependencies:
       bunchee:
