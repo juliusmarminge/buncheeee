@@ -1,0 +1,85 @@
+{
+  "name": "a",
+  "type": "module",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=18.13.0"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rm -rf dist && bunchee"
+  },
+  "dependencies": {
+    "@repo/shared": "^0.1.0"
+  },
+  "devDependencies": {
+    "bunchee": "^4.3.1",
+    "next": "14.0.1",
+    "typescript": "^5.1.6",
+    "undici": "^5.20.0",
+    "zod": "^3.22.3"
+  },
+  "peerDependencies": {
+    "next": "*"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    },
+    "fastify": {
+      "optional": true
+    },
+    "h3": {
+      "optional": true
+    },
+    "next": {
+      "optional": true
+    },
+    "tailwindcss": {
+      "optional": true
+    },
+    "zod": {
+      "optional": true
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@uploadthing/eslint-config/base"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "import": "./dist/client.mjs",
+      "require": "./dist/client.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.mjs",
+      "require": "./dist/server.js"
+    },
+    "./next": {
+      "types": "./dist/next.d.ts",
+      "import": "./dist/next.mjs",
+      "require": "./dist/next.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "server": [
+        "dist/server.d.ts"
+      ],
+      "next": [
+        "dist/next.d.ts"
+      ]
+    }
+  }
+}
