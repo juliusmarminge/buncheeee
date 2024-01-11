@@ -8,7 +8,8 @@
     "pnpm": ">=8.7.0"
   },
   "scripts": {
-    "build": "turbo run build --filter \"./packages/*\""
+    "build": "turbo run build --filter \"./packages/*\"",
+    "dev": "turbo run dev --filter \"./packages/*\""
   },
   "dependencies": {
     "@types/node": "18.16.0",

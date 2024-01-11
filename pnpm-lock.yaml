@@ -21,7 +21,7 @@ importers:
   packages/a:
     dependencies:
       '@repo/shared':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../shared
     devDependencies:
       bunchee:

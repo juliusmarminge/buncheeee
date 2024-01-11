@@ -10,10 +10,11 @@
     "access": "public"
   },
   "scripts": {
-    "build": "rm -rf dist && bunchee"
+    "build": "rm -rf dist && bunchee",
+    "dev": "bunchee -w"
   },
   "dependencies": {
-    "@repo/shared": "^0.1.0"
+    "@repo/shared": "workspace:*"
   },
   "devDependencies": {
     "bunchee": "^4.3.1",
